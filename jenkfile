@@ -1,0 +1,25 @@
+node{
+        
+        def mavenHome =  tool name: "maven"
+        stage('gettingcodefromgit'){
+            git branch: 'development', credentialsId: '3d2ee229-3138-4a55-a483-de72d58636cb', url: 'https://github.com/Gnanu571/icici.git'
+            
+        }
+    
+    stage('build'){
+        sh "${mavenHome}/bin/mvn clean package"
+    }
+    stage('sonar'){
+        sh "${mavenHome}/bin/mvn clean sonar:sonar"
+    }
+    stage('nexus'){
+        sh "${mavenHome}/bin/mvn clean deploy"
+    }
+    stage('tomcat'){
+        
+    sshagent(['09cd36a9-d193-4d2b-b9ea-3f6c6778df40']) {
+        sh "scp -o strictHostKeyChecking=no target/maven-web-application.war ec2-user@172.31.24.105:/opt/apache-tomcat-9.0.80/webapps/"
+    }
+    }
+    
+    }//node closing
