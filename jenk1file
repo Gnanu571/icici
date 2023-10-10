@@ -6,10 +6,10 @@ node{
         
     }
 
-/*stage('build'){
+stage('build'){
     sh "${mavenHome}/bin/mvn clean package"
 }
-stage('sonar'){
+/*stage('sonar'){
     sh "${mavenHome}/bin/mvn clean sonar:sonar"
 }
 stage('nexus'){
