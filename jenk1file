@@ -9,7 +9,8 @@ node{
 stage('build'){
     sh "${mavenHome}/bin/mvn clean package"
 }
-/*stage('sonar'){
+/*
+stage('sonar'){
     sh "${mavenHome}/bin/mvn clean sonar:sonar"
 }
 stage('nexus'){
@@ -21,6 +22,7 @@ sshagent(['09cd36a9-d193-4d2b-b9ea-3f6c6778df40']) {
     sh "scp target/maven-web-application.war ec2-user@172.31.24.105:/opt/apache-tomcat-9.0.80/webapps/"
 }
 }
+*/
 
 }//node closing
-*/
+
