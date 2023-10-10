@@ -1,6 +1,7 @@
 node{
     
     def mavenHome =  tool name: "maven"
+properties([buildDiscarder(logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '', daysToKeepStr: '30', numToKeepStr: '5')), [$class: 'JobLocalConfiguration', changeReasonComment: ''], pipelineTriggers([upstream(''), cron('* * * * *'), pollSCM('')])])
     stage('gettingcodefromgit'){
         git branch: 'development', credentialsId: '3d2ee229-3138-4a55-a483-de72d58636cb', url: 'https://github.com/Gnanu571/icici.git'
         
