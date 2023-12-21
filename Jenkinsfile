@@ -1,5 +1,6 @@
 node{
 def mavenhome = tool name: "maven"
+  properties([buildDiscarder(logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '', daysToKeepStr: '', numToKeepStr: '5'))])
 stage ('git'){
 git branch: 'development', credentialsId: 'a88f937b-a405-4e0a-8287-7968fa29801e', url: 'https://github.com/Gnanu571/icici.git'
 }
