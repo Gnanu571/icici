@@ -1,0 +1,20 @@
+#!/bin/sh
+
+send_slack() {
+
+        if [ -z "${SLACK_TOKEN}" ];then
+                echo "function send_slack needs SLACK_TOKEN variable. Add a new integration to slack."
+                exit 1
+        fi
+        if [ -z "${1}" ];then
+                echo "No text to send ? Are you kidding me ?"
+                exit 1
+        fi
+        [ -z "${SLACK_CHAN}" ] && SLACK_CHAN="#tests"
+        [ -z "${SLACK_USERNAME}" ] && SLACK_USERNAME=YOURBOT
+        [ -z "${SLACK_ICON}" ] && SLACK_ICON=":postal_horn:"
+
+        URL=https://YOURSLACKACCOUNT.slack.com/services/hooks/incoming-webhook?token=${SLACK_TOKEN}
+
+        curl -X POST --data-urlencode 'payload={"channel": "'${SLACK_CHAN}'", "username": "'${SLACK_USERNAME}'", "text": "'"${*}"'", "icon_emoji": "'${SLACK_ICON}'"}' ${URL} > /dev/null 2>&1
+}
