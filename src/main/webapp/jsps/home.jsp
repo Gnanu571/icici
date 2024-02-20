@@ -9,7 +9,7 @@
 </head>
 </head>
 <body>
-<h1 align="center">Welcome to Mithun Technologies Pvt Ltd. Ph No: +91-9704041151,+91-9900012028  Bengaluru,Karnataka </h1>
+<h1 align="center">Welcome to Mithun Technologies Pvt Ltd. Ph No: +91-994930388,+91-9900012028  Bengaluru,Karnataka </h1>
 <h1 align="center"> Mithun Technologies- Very Good Training center for DevOps with AWS in chennai India and also for Job Assitance Job Support also...Teaching Real Time scnerios</h1>
 <hr>
 <br>
