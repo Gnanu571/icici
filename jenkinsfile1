@@ -1,0 +1,15 @@
+node{
+def mavenhome = tool name: "maven"
+stage('checkoutcode'){
+git credentialsId: '2f8590c4-696a-4e3f-a032-e56f293a7164', url: 'https://github.com/Gnanu571/icici.git'
+}
+stage('maven'){
+sh "${mavenhome}/bin/mvn clean package"
+}
+stage('sonar'){
+sh "${mavenhome}/bin/mvn clean sonar:sonar"
+}
+stage('nexus'){
+sh "${mavenhome}/bin/mvn clean deploy"
+}
+}//node close
