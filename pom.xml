@@ -97,15 +97,15 @@
 	
 	<repository>
 	      <id>nexus</id>
-	      <name>icici Nexus Repository</name>
-	      <url>http://52.42.233.57:8081/repository/icicibank-release/</url>
+	      <name>baroda-release</name>
+	      <url>http://13.51.13.234:8081/repository/maven-releases/</url>
 	    </repository>
 		
 	    
 	    <snapshotRepository>
 	      <id>nexus</id>
-	      <name>icici Snapshot Nexus Repository </name>
-	      <url>http://52.42.233.57:8081/repository/icicibank-snapshot/</url>
+	      <name>baroda-snapshot</name>
+	      <url>http://13.51.13.234:8081/repository/maven-snapshots/</url>
 	    </snapshotRepository>
 	    
 	</distributionManagement>
