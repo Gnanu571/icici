@@ -9,7 +9,7 @@
 </head>
 </head>
 <body>
-<h1 align="center">Welcome to Mithun Technologies Pvt Ltd. Andhra Pradesh,India </h1>
+<h1 align="center">Welcome to gnanu Technologies Pvt Ltd. Andhra Pradesh,India </h1>
 <h1 align="center"> New Batch will be start in july 4rd week  at 11:20 PM IST by bhasker sir and balaji sir - Contact 9704041151/9980923216 or devopstrainingblr@gmail.com</h1> 
 <h1 align="center"> Mithun Technologies- Very Good Training center for DevOps with AWS in Bangalore India and also for Job Assitance Job Support also...Teaching Real Time scnerios</h1>
 <hr>
